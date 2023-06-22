@@ -1,13 +1,12 @@
-import { BoxProps } from 'legos';
-import { ColorType } from 'utils';
-import { RNPickerItem } from '../../mock/types';
+import {BoxProps} from 'legos';
+import {ColorType} from 'utils';
 
 export interface SelectProps {
   label?: string;
-  placeholder?: RNPickerItem;
+  placeholder?: any;
   color?: ColorType;
   value?: any;
-  items: RNPickerItem[];
+  items: any[];
   type?: 'underline' | 'outline';
   onChange: any;
   styleContainer?: BoxProps;

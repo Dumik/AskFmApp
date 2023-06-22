@@ -1,26 +1,14 @@
-import React, { FC, useState } from 'react';
+import React, {FC, useState} from 'react';
 import {
   TextInput,
   TextInputProps,
   NativeSyntheticEvent,
   TextInputFocusEventData,
 } from 'react-native';
-import styled from 'styled-components';
 
-// import { Box } from '../legos/Box';
-import { Text } from './Text';
-import { theme } from '../utils';
-import { Box } from './Box';
-
-const TextInputStyled = styled(TextInput)`
-  flex: 1;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 18px;
-  font-family: Helvetica;
-  padding-top: 10px;
-  padding-bottom: 10px;
-`;
+import {Text} from './Text';
+import {theme} from '../utils';
+import {Box} from './Box';
 
 type InputType = 'underline' | 'outline';
 
@@ -74,42 +62,45 @@ export const Input: FC<Props> = ({
         <Text fontSize={14} color={focus ? 'blue' : 'navy'} lineHeight={32}>
           {label ?? ''}
         </Text>
-
       </>
     );
   };
 
   return (
     <Box
-      // minHeight={40}
-      borderColor={getBorderColor(focus, type)}
-      width={width}
+      borderColor={error ? 'red' : 'white'}
+      width="100%"
       backgroundColor="white"
       paddingHorizontal={type === 'outline' ? 20 : 0}
-      paddingVertical={5}
-      // {...(type === 'outline'
-      //   ? { borderWidth: BORDER_OUTLINE_WIDTH }
-      //   : { borderBottomWidth: 1 })}
-      borderRadius={type === 'outline' ? 4 : 0}
-    >
+      borderRadius={4}
+      borderWidth={1}>
       {type === 'underline' ? (
         <Box marginTop={-10} flexDirection="row" alignItems="center">
           {getLabel()}
         </Box>
       ) : null}
-      <TextInputStyled
+      <TextInput
         {...props}
         onBlur={onBlurHandle}
         onFocus={onFocusHandle}
         placeholderTextColor={theme.colors.grayDark}
+        style={[
+          {
+            width: '100%',
+            flex: 1,
+            fontSize: 14,
+            fontWeight: '400',
+            lineHeight: 18,
+            fontFamily: 'Helvetica',
+          },
+        ]}
       />
       {error ? (
         <Box
           absolute
           bottom={-20}
-          paddingHorizontal={type === 'outline' ? 20 : 0}
-        >
-          <Text fontSize={13} color="red">
+          paddingHorizontal={type === 'outline' ? 20 : 0}>
+          <Text fontSize={13} color="white">
             {error}
           </Text>
         </Box>

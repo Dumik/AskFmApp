@@ -1,28 +1,31 @@
-import {Text} from 'react-native';
-import React, {FC} from 'react';
-import {useForm, Controller} from 'react-hook-form';
+import {Text, TextInput} from 'react-native';
+import React, {FC, useState} from 'react';
 
 import {Screens, RootStackParamList} from '../navigation';
 import {Box, Button, Input, ScrollView, Logo, TextError} from '../legos';
+import {Formik} from 'formik';
+import * as Yup from 'yup';
+
+const validationSchema = Yup.object().shape({
+  login: Yup.string()
+    .required('Login is required')
+    .matches(/^[A-Za-z0-9]+(?:[._-][A-Za-z0-9]+)*$/, 'Invalid login format'),
+  password: Yup.string().required('Password is required'),
+});
+
+const initialValuesForm = {
+  login: '',
+  password: '',
+};
 
 //@ts-ignore
 export const SignInScreen: FC<RootStackParamList> = ({navigation}) => {
-  const {
-    control,
-    handleSubmit,
-    formState: {errors},
-  } = useForm({
-    defaultValues: {
-      email: '',
-      password: '',
-    },
-  });
-  const onSubmit = (data: {email: string; password: string}) => {
+  const onSubmit = (data: {login: string; password: string}) => {
+    console.log('%c jordan data', 'color: lime;', data);
     navigation.navigate(Screens.Tabs);
     console.log(data);
   };
 
-  //TODO: Add yup validations
   return (
     <ScrollView backgroundColor="mainBlue">
       <Box
@@ -34,70 +37,59 @@ export const SignInScreen: FC<RootStackParamList> = ({navigation}) => {
         <Box marginBottom={100}>
           <Logo color="white" />
         </Box>
-        <Box>
-          <Controller
-            control={control}
-            rules={{
-              required: true,
-            }}
-            render={({field: {onChange, value}}) => (
-              // <Input
-              //   onChange={onChange}
-              //   value={value}
-              //   placeholder="Email"
-              //   keyboardType="email-address"
-              // />
-              <Input
-                // label="Email"
-                value={value}
-                textContentType="emailAddress"
-                onChangeText={onChange}
-                // error={(touched.email && errors?.email) || ''}
-                type="outline"
-              />
-            )}
-            name="email"
-          />
-          {errors.email ? (
-            <TextError text="This is required!" />
-          ) : (
-            <Box height={16} />
-          )}
-          <Box height={6} />
-          <Controller
-            control={control}
-            rules={{
-              required: true,
-            }}
-            render={({field: {onChange, onBlur, value}}) => (
-              <Box height={40}>
-                <Input
-                  label="Email"
-                  value={value}
-                  textContentType="emailAddress"
-                  onChangeText={onChange}
-                  // error={(touched.email && errors?.email) || ''}
-                  // type="outline"
-                />
+
+        <Formik
+          initialValues={initialValuesForm}
+          onSubmit={onSubmit}
+          validationSchema={validationSchema}>
+          {({handleChange, values, errors, touched, handleSubmit}) => (
+            <>
+              <Box
+                flexDirection="row"
+                justifyContent="space-between"
+                marginBottom={30}>
+                <Box flex={1} marginRight={0} width={45} maxWidth={300}>
+                  <Input
+                    value={values.login}
+                    onChangeText={handleChange('login')}
+                    placeholder="Enter your email"
+                    keyboardType="email-address"
+                    autoCapitalize="none"
+                    label="placeholder"
+                    type="outline"
+                    error={(touched.login && errors.login) || ''}
+                  />
+                </Box>
               </Box>
-            )}
-            name="password"
-          />
-          {errors.password ? (
-            <TextError text="This is required!" />
-          ) : (
-            <Box height={16} />
+              <Box
+                flexDirection="row"
+                justifyContent="space-between"
+                marginBottom={30}>
+                <Box flex={1} marginRight={0} width={45} maxWidth={300}>
+                  <Input
+                    label=""
+                    value={values.password}
+                    onChangeText={handleChange('password')}
+                    placeholder="Password"
+                    textContentType="password"
+                    autoCapitalize="none"
+                    error={(touched.password && errors.password) || ''}
+                    type="outline"
+                    secureTextEntry
+                  />
+                </Box>
+              </Box>
+
+              <Button
+                onPress={handleSubmit}
+                title="Login"
+                bgColor="btnLime"
+                width={300}
+              />
+            </>
           )}
+        </Formik>
 
-          <Box height={6} />
-
-          <Button
-            onPress={handleSubmit(onSubmit)}
-            title="Login"
-            bgColor="btnLime"
-            width={300}
-          />
-        </Box>
         <Box
           flexDirection="row"
           alignItems="center"

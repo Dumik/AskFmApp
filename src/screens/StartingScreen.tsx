@@ -17,16 +17,16 @@ export const StartingScreen: FC<RootStackParamList> = ({navigation}) => {
       </Box>
       <Box>
         <Button
-          onPress={() => navigation.navigate(Screens.SignIn)}
-          title="Login"
+          onPress={() => navigation.navigate(Screens.SignUp)}
+          title="Sign Up"
           width={300}
+          bgColor="btnBlue"
         />
         <Box height={10} />
         <Button
-          onPress={() => navigation.navigate(Screens.SignUp)}
-          title="Create account"
+          onPress={() => navigation.navigate(Screens.SignIn)}
+          title="Log In"
           width={300}
-          bgColor="btnBlue"
         />
       </Box>
     </Box>
