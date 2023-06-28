@@ -1,17 +1,10 @@
 import {Text, TextInputIOSProps} from 'react-native';
 import React, {FC} from 'react';
 import {Formik} from 'formik';
+import * as Yup from 'yup';
 
 import {Screens, RootStackParamList} from '../navigation';
-import {
-  Box,
-  Button,
-  Input,
-  ScrollView,
-  Logo,
-  TextError,
-  Select,
-} from '../legos';
+import {Box, Button, Input, ScrollView, Logo} from '../legos';
 
 type BodyType = {
   email: string | null | undefined;
@@ -72,6 +65,18 @@ const initialValuesForm = {
   username: '',
   password: '',
 };
+
+const validationSchema = Yup.object().shape({
+  email: Yup.string()
+    .email('Invalid email format')
+    .required('Email is required'),
+  fullName: Yup.string().required('Full Name is required'),
+  username: Yup.string()
+    .required('Username is required')
+    .matches(/^[A-Za-z0-9]+(?:[._-][A-Za-z0-9]+)*$/, 'Invalid username format'),
+  password: Yup.string().required('Password is required'),
+});
+
 // @ts-ignore
 export const SignUpScreen: FC<RootStackParamList> = ({navigation}) => {
   //TODO: Add yup validations
@@ -96,7 +101,10 @@ export const SignUpScreen: FC<RootStackParamList> = ({navigation}) => {
           <Logo color="white" />
         </Box>
         <Box>
-          <Formik initialValues={initialValuesForm} onSubmit={handlerSubmit}>
+          <Formik
+            initialValues={initialValuesForm}
+            onSubmit={handlerSubmit}
+            validationSchema={validationSchema}>
             {({handleChange, values, handleSubmit, errors, touched}) => (
               <>
                 {signUpFields.map(
@@ -105,7 +113,7 @@ export const SignUpScreen: FC<RootStackParamList> = ({navigation}) => {
                       <Box
                         flexDirection="row"
                         justifyContent="space-between"
-                        marginBottom={20}
+                        marginBottom={25}
                         key={fieldName}>
                         <Box flex={1} marginRight={0} width={45}>
                           <Input
