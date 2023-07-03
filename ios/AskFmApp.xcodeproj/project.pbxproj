@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* AskFmAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* AskFmAppTests.m */; };
-		1106BFEC0D87767A2D1C89A2 /* libPods-AskFmApp-AskFmAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF8ADAE76AC0C8332D94B6DE /* libPods-AskFmApp-AskFmAppTests.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		3B898DF227D12C6C2868C524 /* libPods-AskFmApp-AskFmAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A4F9D2C0272EA66A2DA44DF /* libPods-AskFmApp-AskFmAppTests.a */; };
+		54F50DCAF96AD3AD86C673B5 /* libPods-AskFmApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76DCDC6B4CB8D3C1B42A9BDB /* libPods-AskFmApp.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		D8AE672D3006C8387A6A5F68 /* libPods-AskFmApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 546DAB83C815A86EF9828469 /* libPods-AskFmApp.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,20 +30,20 @@
 		00E356EE1AD99517003FC87E /* AskFmAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AskFmAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* AskFmAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AskFmAppTests.m; sourceTree = "<group>"; };
+		09B8ABE3564FD60E14D02516 /* Pods-AskFmApp-AskFmAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AskFmApp-AskFmAppTests.debug.xcconfig"; path = "Target Support Files/Pods-AskFmApp-AskFmAppTests/Pods-AskFmApp-AskFmAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* AskFmApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AskFmApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = AskFmApp/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = AskFmApp/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = AskFmApp/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = AskFmApp/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = AskFmApp/main.m; sourceTree = "<group>"; };
-		1461A48D42462C7E395168AF /* Pods-AskFmApp-AskFmAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AskFmApp-AskFmAppTests.debug.xcconfig"; path = "Target Support Files/Pods-AskFmApp-AskFmAppTests/Pods-AskFmApp-AskFmAppTests.debug.xcconfig"; sourceTree = "<group>"; };
-		546DAB83C815A86EF9828469 /* libPods-AskFmApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AskFmApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		40EE912FD8B7692A4D4385E2 /* Pods-AskFmApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AskFmApp.release.xcconfig"; path = "Target Support Files/Pods-AskFmApp/Pods-AskFmApp.release.xcconfig"; sourceTree = "<group>"; };
+		5A4F9D2C0272EA66A2DA44DF /* libPods-AskFmApp-AskFmAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AskFmApp-AskFmAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6685BE87F4E974C9987A92D9 /* Pods-AskFmApp-AskFmAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AskFmApp-AskFmAppTests.release.xcconfig"; path = "Target Support Files/Pods-AskFmApp-AskFmAppTests/Pods-AskFmApp-AskFmAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		76DCDC6B4CB8D3C1B42A9BDB /* libPods-AskFmApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AskFmApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = AskFmApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		893F4B40D0CEB09B9365D876 /* Pods-AskFmApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AskFmApp.release.xcconfig"; path = "Target Support Files/Pods-AskFmApp/Pods-AskFmApp.release.xcconfig"; sourceTree = "<group>"; };
-		B091ED9A2DA3CDE41062B378 /* Pods-AskFmApp-AskFmAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AskFmApp-AskFmAppTests.release.xcconfig"; path = "Target Support Files/Pods-AskFmApp-AskFmAppTests/Pods-AskFmApp-AskFmAppTests.release.xcconfig"; sourceTree = "<group>"; };
-		DF8ADAE76AC0C8332D94B6DE /* libPods-AskFmApp-AskFmAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AskFmApp-AskFmAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		846FA9A1409C72AF0F2BE429 /* Pods-AskFmApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AskFmApp.debug.xcconfig"; path = "Target Support Files/Pods-AskFmApp/Pods-AskFmApp.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		F1E5B946563F5ACE513B0E76 /* Pods-AskFmApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AskFmApp.debug.xcconfig"; path = "Target Support Files/Pods-AskFmApp/Pods-AskFmApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1106BFEC0D87767A2D1C89A2 /* libPods-AskFmApp-AskFmAppTests.a in Frameworks */,
+				3B898DF227D12C6C2868C524 /* libPods-AskFmApp-AskFmAppTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8AE672D3006C8387A6A5F68 /* libPods-AskFmApp.a in Frameworks */,
+				54F50DCAF96AD3AD86C673B5 /* libPods-AskFmApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,8 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				546DAB83C815A86EF9828469 /* libPods-AskFmApp.a */,
-				DF8ADAE76AC0C8332D94B6DE /* libPods-AskFmApp-AskFmAppTests.a */,
+				76DCDC6B4CB8D3C1B42A9BDB /* libPods-AskFmApp.a */,
+				5A4F9D2C0272EA66A2DA44DF /* libPods-AskFmApp-AskFmAppTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -140,10 +140,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F1E5B946563F5ACE513B0E76 /* Pods-AskFmApp.debug.xcconfig */,
-				893F4B40D0CEB09B9365D876 /* Pods-AskFmApp.release.xcconfig */,
-				1461A48D42462C7E395168AF /* Pods-AskFmApp-AskFmAppTests.debug.xcconfig */,
-				B091ED9A2DA3CDE41062B378 /* Pods-AskFmApp-AskFmAppTests.release.xcconfig */,
+				846FA9A1409C72AF0F2BE429 /* Pods-AskFmApp.debug.xcconfig */,
+				40EE912FD8B7692A4D4385E2 /* Pods-AskFmApp.release.xcconfig */,
+				09B8ABE3564FD60E14D02516 /* Pods-AskFmApp-AskFmAppTests.debug.xcconfig */,
+				6685BE87F4E974C9987A92D9 /* Pods-AskFmApp-AskFmAppTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -155,12 +155,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "AskFmAppTests" */;
 			buildPhases = (
-				5920562C2A415088CEB244A1 /* [CP] Check Pods Manifest.lock */,
+				72D899A5A406663CF5DFC048 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				BD7A9D6CC23D8978C7EA5BFB /* [CP] Embed Pods Frameworks */,
-				97E7820767CF9136791107C4 /* [CP] Copy Pods Resources */,
+				0EA2C44C9760A230982DCD5A /* [CP] Embed Pods Frameworks */,
+				5CD8E0AF079EE9DC839A4F27 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,14 +176,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "AskFmApp" */;
 			buildPhases = (
-				7F6F15EC8802B7E782C95AF1 /* [CP] Check Pods Manifest.lock */,
+				6A5E8C179B8E12A228A62763 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				67F926F7083414C7F203DC15 /* [CP] Embed Pods Frameworks */,
-				A3F5BA4C95A9DFBBEBA778A2 /* [CP] Copy Pods Resources */,
+				723A9665E4DF03D549EAD394 /* [CP] Embed Pods Frameworks */,
+				E4458FBEBBA985958B9C9CB4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -264,46 +264,41 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
-		5920562C2A415088CEB244A1 /* [CP] Check Pods Manifest.lock */ = {
+		0EA2C44C9760A230982DCD5A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AskFmApp-AskFmAppTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		67F926F7083414C7F203DC15 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AskFmApp/Pods-AskFmApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-AskFmApp-AskFmAppTests/Pods-AskFmApp-AskFmAppTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AskFmApp/Pods-AskFmApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-AskFmApp-AskFmAppTests/Pods-AskFmApp-AskFmAppTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AskFmApp/Pods-AskFmApp-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AskFmApp-AskFmAppTests/Pods-AskFmApp-AskFmAppTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7F6F15EC8802B7E782C95AF1 /* [CP] Check Pods Manifest.lock */ = {
+		5CD8E0AF079EE9DC839A4F27 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AskFmApp-AskFmAppTests/Pods-AskFmApp-AskFmAppTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AskFmApp-AskFmAppTests/Pods-AskFmApp-AskFmAppTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AskFmApp-AskFmAppTests/Pods-AskFmApp-AskFmAppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A5E8C179B8E12A228A62763 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -325,24 +320,46 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		97E7820767CF9136791107C4 /* [CP] Copy Pods Resources */ = {
+		723A9665E4DF03D549EAD394 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AskFmApp-AskFmAppTests/Pods-AskFmApp-AskFmAppTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-AskFmApp/Pods-AskFmApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AskFmApp-AskFmAppTests/Pods-AskFmApp-AskFmAppTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-AskFmApp/Pods-AskFmApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AskFmApp-AskFmAppTests/Pods-AskFmApp-AskFmAppTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AskFmApp/Pods-AskFmApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A3F5BA4C95A9DFBBEBA778A2 /* [CP] Copy Pods Resources */ = {
+		72D899A5A406663CF5DFC048 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AskFmApp-AskFmAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4458FBEBBA985958B9C9CB4 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -357,23 +374,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AskFmApp/Pods-AskFmApp-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BD7A9D6CC23D8978C7EA5BFB /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AskFmApp-AskFmAppTests/Pods-AskFmApp-AskFmAppTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AskFmApp-AskFmAppTests/Pods-AskFmApp-AskFmAppTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AskFmApp-AskFmAppTests/Pods-AskFmApp-AskFmAppTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -428,7 +428,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1461A48D42462C7E395168AF /* Pods-AskFmApp-AskFmAppTests.debug.xcconfig */;
+			baseConfigurationReference = 09B8ABE3564FD60E14D02516 /* Pods-AskFmApp-AskFmAppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -455,7 +455,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B091ED9A2DA3CDE41062B378 /* Pods-AskFmApp-AskFmAppTests.release.xcconfig */;
+			baseConfigurationReference = 6685BE87F4E974C9987A92D9 /* Pods-AskFmApp-AskFmAppTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -479,7 +479,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F1E5B946563F5ACE513B0E76 /* Pods-AskFmApp.debug.xcconfig */;
+			baseConfigurationReference = 846FA9A1409C72AF0F2BE429 /* Pods-AskFmApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -505,7 +505,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 893F4B40D0CEB09B9365D876 /* Pods-AskFmApp.release.xcconfig */;
+			baseConfigurationReference = 40EE912FD8B7692A4D4385E2 /* Pods-AskFmApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

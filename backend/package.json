@@ -18,13 +18,11 @@
   "scripts": {
     "start": "cross-env NODE_ENV=production node app.js",
     "server": "nodemon app.js",
-    "frontend": "yarn run start --prefix frontend",
-    "frontend:install": "npm install --prefix frontend",
-    "frontend:build": "npm run build --prefix frontend",
-    "dev": "cross-env NODE_ENV=development concurrently \"yarn run server\"  \"yarn run frontend\""
+    "dev": "cross-env NODE_ENV=development concurrently \"yarn run server\""
   },
   "author": "dumik29",
   "license": "MIT",
+  
   "devDependencies": {
     "concurrently": "^7.1.0",
     "nodemon": "^2.0.15"
