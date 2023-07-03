@@ -4,6 +4,10 @@ export enum Screens {
   Tabs = 'Tabs',
   SignIn = 'SignIn',
   SignUp = 'SignUp',
+  Home = 'Home',
+  Profile = 'Profile',
+  Friends = 'Friends',
+  Questions = 'Questions',
 }
 
 export type RootStackParamList = {

@@ -20,7 +20,9 @@ interface Props extends TextInputProps {
   type?: InputType;
 }
 
-const BORDER_OUTLINE_WIDTH = 3;
+import {Platform} from 'react-native';
+
+const isIOS = Platform.OS === 'ios';
 
 const getBorderColor = (focus: boolean, type: InputType) => {
   if (focus) {
@@ -73,7 +75,8 @@ export const Input: FC<Props> = ({
       backgroundColor="white"
       paddingHorizontal={type === 'outline' ? 20 : 0}
       borderRadius={4}
-      borderWidth={1}>
+      borderWidth={1}
+      paddingVertical={isIOS ? 16 : 0}>
       {type === 'underline' ? (
         <Box marginTop={-10} flexDirection="row" alignItems="center">
           {getLabel()}
