@@ -5,7 +5,6 @@ import * as Yup from 'yup';
 
 import {Screens, RootStackParamList} from '../navigation';
 import {Box, Button, Input, ScrollView, Logo, Text} from '../legos';
-import {useAuth} from '../hooks/useAuth';
 
 type BodyType = {
   gander: string | null | undefined;
@@ -75,7 +74,6 @@ const validationSchema = Yup.object().shape({
 
 // @ts-ignore
 export const SignUpScreen: FC<RootStackParamList> = ({navigation}) => {
-  const {signUp} = useAuth();
   //TODO: Add yup validations
 
   const handlerSubmit = (values: {
@@ -83,7 +81,6 @@ export const SignUpScreen: FC<RootStackParamList> = ({navigation}) => {
     username: string;
     password: string;
   }) => {
-    signUp({...values, id: '3'});
     console.log('%c jordan values', values);
   };
 

@@ -5,9 +5,7 @@ import {Screens, RootStackParamList} from '../navigation';
 import {Box, Button, Input, ScrollView, Logo, TextError} from '../legos';
 import {Formik} from 'formik';
 import * as Yup from 'yup';
-import {StoreContext} from '../storage/store';
-import {getIsSignIn, getMe, signIn} from '../storage/asyncStorage';
-import {useAuth} from '../hooks/useAuth';
+
 
 const validationSchema = Yup.object().shape({
   login: Yup.string()
@@ -23,7 +21,6 @@ const initialValuesForm = {
 
 //@ts-ignore
 export const SignInScreen: FC<RootStackParamList> = ({navigation}) => {
-  const {login} = useAuth();
   const onSubmit = ({
     login: username,
     password,
@@ -31,7 +28,6 @@ export const SignInScreen: FC<RootStackParamList> = ({navigation}) => {
     login: string;
     password: string;
   }) => {
-    login(username, password);
     navigation.navigate(Screens.Tabs);
   };
 

@@ -1,6 +1,5 @@
 export enum Screens {
   Starting = 'Starting',
-  TodoScreen = 'TodoScreen',
   Tabs = 'Tabs',
   SignIn = 'SignIn',
   SignUp = 'SignUp',

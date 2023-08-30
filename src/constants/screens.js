@@ -1,4 +1,1 @@
-export const SCREENS = {
-  TODO: 'Todo',
-  SPEEDOMETER: 'Speedometer',
-};
+export const SCREENS = {};
