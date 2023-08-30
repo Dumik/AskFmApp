@@ -26,6 +26,7 @@ export const theme: DefaultColor = {
     red: '#AA2525',
     green: '#27AE60',
     logoBack: '#eaeaea',
+    primary: '#274C67',
   },
 };
 
@@ -47,4 +48,5 @@ export type ColorType =
   | 'btnLime'
   | 'logoBack'
   | 'btnBlue'
-  | 'red';
+  | 'red'
+  | 'primary';

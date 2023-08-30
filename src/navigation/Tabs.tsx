@@ -26,34 +26,43 @@ export const Tabs = () => {
   }): BottomTabNavigationOptions => {
     return {
       tabBarIcon: ({focused}) => <Box paddingTop={19}>l</Box>,
-      headerStyle: {
-        borderBottomWidth: 1,
-        borderBottomColor: theme.colors.gray,
+      // headerStyle: {
+      //   borderBottomWidth: 1,
+      //   borderBottomColor: '#274C67',
+      //   backgroundColor: '#274C67',
+      // },
+      title: 'My home',
+      tabBarShowLabel: false,
+      headerShown: false,
+      tabBarStyle: {
+        paddingTop: 15,
+        top: 0,
+        backgroundColor: '#f7f7f7',
+        height: 100,
+        borderColor: '#274C67',
       },
 
-      tabBarShowLabel: false,
-
-      tabBarStyle: {
-        height: 50,
-        backgroundColor: theme.colors.navy,
+      tabBarItemStyle: {
+        borderRadius: 10,
       },
     };
   };
 
   return (
-    <Tab.Navigator
-      screenOptions={{
-        headerShown: false,
-      }}>
+    <Tab.Navigator screenOptions={screenOptions}>
       <Tab.Screen
         name={Screens.Home}
         component={HomeScreen}
         options={{
           tabBarShowLabel: false,
-
+          headerTitle: () => 'title',
           tabBarLabel: 'Home',
+          headerShown: false,
           tabBarIcon: ({color, size, focused}) => (
-            <HomeIcon color={focused ? 'purple' : '#bca0dc'} size={size} />
+            <HomeIcon
+              color={focused ? '#274C67' : theme.colors.grayDark}
+              size={size}
+            />
           ),
         }}
       />
@@ -62,10 +71,13 @@ export const Tabs = () => {
         component={QuestionsScreen}
         options={{
           tabBarShowLabel: false,
-
+          headerShown: true,
           tabBarLabel: 'Home',
           tabBarIcon: ({color, size, focused}) => (
-            <QuestionsIcon color={focused ? 'purple' : '#bca0dc'} size={size} />
+            <QuestionsIcon
+              color={focused ? '#274C67' : theme.colors.grayDark}
+              size={size}
+            />
           ),
         }}
       />
@@ -74,10 +86,13 @@ export const Tabs = () => {
         component={FriendsScreen}
         options={{
           tabBarShowLabel: false,
-
+          headerShown: false,
           tabBarLabel: 'Home',
           tabBarIcon: ({color, size, focused}) => (
-            <FriendsIcon color={focused ? 'purple' : '#bca0dc'} size={size} />
+            <FriendsIcon
+              color={focused ? '#274C67' : theme.colors.grayDark}
+              size={size}
+            />
           ),
         }}
       />
@@ -86,10 +101,13 @@ export const Tabs = () => {
         component={ProfileScreen}
         options={{
           tabBarShowLabel: false,
-
+          headerShown: false,
           tabBarLabel: 'Home',
           tabBarIcon: ({color, size, focused}) => (
-            <ProfileIcon color={focused ? 'purple' : '#bca0dc'} size={size} />
+            <ProfileIcon
+              color={focused ? '#274C67' : theme.colors.grayDark}
+              size={size}
+            />
           ),
         }}
       />

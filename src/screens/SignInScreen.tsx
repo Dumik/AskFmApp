@@ -1,10 +1,13 @@
 import {Text, TextInput} from 'react-native';
-import React, {FC, useState} from 'react';
+import React, {FC, useCallback, useContext, useState} from 'react';
 
 import {Screens, RootStackParamList} from '../navigation';
 import {Box, Button, Input, ScrollView, Logo, TextError} from '../legos';
 import {Formik} from 'formik';
 import * as Yup from 'yup';
+import {StoreContext} from '../storage/store';
+import {getIsSignIn, getMe, signIn} from '../storage/asyncStorage';
+import {useAuth} from '../hooks/useAuth';
 
 const validationSchema = Yup.object().shape({
   login: Yup.string()
@@ -20,10 +23,16 @@ const initialValuesForm = {
 
 //@ts-ignore
 export const SignInScreen: FC<RootStackParamList> = ({navigation}) => {
-  const onSubmit = (data: {login: string; password: string}) => {
-    console.log('%c jordan data', 'color: lime;', data);
+  const {login} = useAuth();
+  const onSubmit = ({
+    login: username,
+    password,
+  }: {
+    login: string;
+    password: string;
+  }) => {
+    login(username, password);
     navigation.navigate(Screens.Tabs);
-    console.log(data);
   };
 
   return (
@@ -96,9 +105,9 @@ export const SignInScreen: FC<RootStackParamList> = ({navigation}) => {
           justifyContent="center"
           paddingVertical={16}
           width={300}>
-          <Text style={{marginRight: 4, color: 'white'}}>
+          {/* <Text style={{marginRight: 4, color: 'white'}}>
             Don`t you have an account?
-          </Text>
+          </Text> */}
           <Button
             onPress={() => navigation.navigate(Screens.SignUp)}
             title="Create account"

@@ -1,20 +1,121 @@
 import React, {FC} from 'react';
 
 import {Text, Box, Button, Logo} from '../../legos';
+import {Header} from './Header';
+import {Image, ImageBackground} from 'react-native';
 
 //@ts-ignore
 export const ProfileScreen: FC<RootStackParamList> = ({navigation}) => {
   return (
-    <Box
-      alignItems="center"
-      justifyContent="center"
-      height="100%"
-      backgroundColor="mainBlue">
-      <Box marginBottom={100}>
-        <Logo color="white" />
+    <Box height="100%" backgroundColor="white">
+      <Header />
+      <Box marginTop={100} height={250}>
+        <ImageBackground
+          source={{uri: 'https://picsum.photos/id/228/500/900'}}
+          style={{
+            width: '100%',
+            height: '100%',
+            display: 'flex',
+            justifyContent: 'flex-end',
+          }}>
+          <Box
+            style={{position: 'relative'}}
+            flexDirection="row"
+            justifyContent="space-between">
+            <Image
+              source={{uri: 'https://picsum.photos/id/200/150'}}
+              style={{
+                left: 10,
+                bottom: -60,
+                width: 120,
+                height: 120,
+                borderRadius: 100,
+                position: 'absolute',
+              }}></Image>
+            <Box marginLeft={200} justifyContent="flex-end" alignItems="center">
+              <Text
+                fontSize={24}
+                fontWeight={700}
+                style={{paddingTop: 10}}
+                color="white">
+                Oleg
+              </Text>
+              <Text
+                fontSize={18}
+                fontWeight={700}
+                style={{paddingVertical: 10}}>
+                @dumik
+              </Text>
+            </Box>
+          </Box>
+        </ImageBackground>
       </Box>
-      <Box>
-        <Text>Profile SCREEN</Text>
+      <Box width={'100%'} height={70} justifyContent="center">
+        <Box
+          width={150}
+          height={30}
+          marginLeft={150}
+          borderStyle="solid"
+          borderColor="gray"
+          borderWidth={1}
+          flexDirection="row"
+          justifyContent="center"
+          alignItems="center"
+          backgroundColor="grayLight">
+          <Text fontSize={16}>Followers:</Text>
+          <Text fontWeight={700}>134</Text>
+        </Box>
+      </Box>
+      <Box
+        borderStyle="solid"
+        borderColor="grayLight"
+        borderTopWidth={2}
+        borderBottomWidth={2}
+        flexDirection="row"
+        justifyContent="space-around"
+        alignItems="center"
+        paddingHorizontal={16}
+        height={80}>
+        <Box alignItems="center">
+          <Text fontSize={18} fontWeight={700}>
+            168
+          </Text>
+          <Text fontWeight={400} color="blue">
+            answers
+          </Text>
+        </Box>
+        <Box
+          borderColor="grayLight"
+          borderStyle="solid"
+          borderLeftWidth={2}
+          height={40}></Box>
+        <Box alignItems="center">
+          <Text fontSize={18} fontWeight={700}>
+            582
+          </Text>
+          <Text fontWeight={400} color="blue">
+            likes
+          </Text>
+        </Box>
+        <Box
+          borderColor="grayLight"
+          borderStyle="solid"
+          borderRightWidth={2}
+          height={40}></Box>
+
+        <Box alignItems="center">
+          <Text fontSize={18} fontWeight={700}>
+            0
+          </Text>
+          <Text fontWeight={400} color="blue">
+            gifts
+          </Text>
+        </Box>
+      </Box>
+      <Box width="100%" alignItems="center" paddingTop={24}>
+        <Box width="80%">
+          <Button title="Ask me a Question" onPress={() => {}} />
+        </Box>
       </Box>
     </Box>
   );

@@ -1,7 +1,7 @@
-import React, { FC } from 'react';
-import { View, ViewProps } from 'react-native';
+import React, {FC} from 'react';
+import {View, ViewProps} from 'react-native';
 import styled from 'styled-components';
-import { ColorType, parseStyledSize, theme } from '../utils';
+import {ColorType, parseStyledSize, theme} from '../utils';
 
 export interface BoxProps extends ViewProps {
   justifyContent?:

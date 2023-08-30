@@ -1,60 +1,105 @@
-import {useCallback, useEffect, useState} from 'react';
-import {useHttp} from './useHttp';
+import {UserType} from '../mock';
+import {useCallback, useContext} from 'react';
+import {
+  addUserSignUp,
+  getIsSignIn,
+  getMe,
+  removeIsSignInAndUserId,
+  setIsSignIn,
+  signIn,
+  signInAsAnonymous,
+} from '../storage/asyncStorage';
+import {StoreContext} from '../storage/store';
+export interface UserSignUpType extends UserType {
+  username: string;
+  password: string;
+  fullName: string;
+}
+
 export const useAuth = () => {
-  const [token, setToken] = useState<string>('');
-  const [userId, setUserId] = useState<string>('');
-  const [me, setMe] = useState<any | string | null>(null);
-  const {request} = useHttp();
+  const [state, action] = useContext(StoreContext);
 
-  const login = useCallback((jwtToken?: string, id?: string) => {
-    setToken(jwtToken || '');
-    setUserId(id || '');
-    // localStorage.setItem('token', JSON.stringify({ userId: jwtToken, token: id }));
-  }, []);
-
-  const logout = useCallback(() => {
-    setToken('');
-    setUserId('');
-    // localStorage.removeItem('token');
-  }, []);
-
-  useEffect(() => {
-    const data = JSON.parse(
-      //   localStorage.getItem('token')
-      // ||
-      '{}',
-    );
-    if (!token && data && data.token) {
-      login(data.token, data.userId);
-    }
-  }, [login, token]);
-
-  const handlerLogin = async (userId: string | undefined | null) => {
+  const checkSignIn = useCallback(async () => {
     try {
-      const data = await request(`/api/user/${userId}`, 'GET', null, {
-        authorization: `Bearer ${token}`,
+      await getIsSignIn();
+      const user = await getMe();
+
+      action({type: 'signIn', payload: user});
+      action({type: 'checkSignIn', payload: true});
+    } catch (err) {
+      action({type: 'checkSignIn', payload: false});
+    }
+  }, [action]);
+
+  const logout = useCallback(async () => {
+    try {
+      action({type: 'loadingSignIn', payload: true});
+
+      await removeIsSignInAndUserId();
+    } finally {
+      action({type: 'loadingSignIn', payload: false});
+      action({type: 'logout'});
+    }
+  }, [action]);
+
+  const login = useCallback(
+    async (username: string, password: string) => {
+      console.log('%c jordan username', 'color: lime;', {username, password});
+      try {
+        action({type: 'loadingSignIn', payload: true});
+        const user = await signIn(username, password);
+        action({
+          type: 'signIn',
+          payload: {lastName: 'asdasd', id: '2'},
+        });
+        await setIsSignIn();
+      } catch (err) {
+        logout();
+        throw err;
+      } finally {
+        action({type: 'loadingSignIn', payload: false});
+      }
+    },
+    [action, logout],
+  );
+
+  const loginAsAnonymous = useCallback(async () => {
+    try {
+      action({type: 'loadingSignIn', payload: true});
+
+      const user = await signInAsAnonymous();
+
+      action({
+        type: 'updateMe',
+        payload: user,
       });
-      setMe(data);
-      console.log(
-        '%c jordan USER',
-        'color: lime; font-weight: bold; font-size: 16px; text-transform: uppercase',
-        data,
-      );
-    } catch (e) {
-      console.log(
-        '%c jordan ERROR',
-        'color: red; font-weight: bold; font-size: 16px; text-transform: uppercase',
-        e,
-      );
+    } finally {
+      action({type: 'loadingSignIn', payload: false});
     }
+  }, [action]);
+
+  const signUp = useCallback(
+    async (user: UserSignUpType): Promise<UserType> => {
+      console.log('%c jordan user', 'color: lime;', user);
+      try {
+        action({type: 'loadingSignUp', payload: true});
+        return addUserSignUp(user);
+      } finally {
+        action({type: 'loadingSignUp', payload: false});
+      }
+    },
+    [action],
+  );
+
+  return {
+    login,
+    loginAsAnonymous,
+    action,
+    logout,
+    signUp,
+    checkSignIn,
+    isSignIn: state.isSignIn,
+    loadingSignUp: state.loadingSignUp,
+    loadingSignIn: state.loadingSignIn,
   };
-
-  useEffect(() => {
-    if (!!token) {
-      handlerLogin(userId);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [token, userId]);
-
-  return {logout, login, userId, token, me};
 };

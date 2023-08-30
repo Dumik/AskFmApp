@@ -1,13 +1,13 @@
-import {Text, TextInputIOSProps} from 'react-native';
+import {TextInputIOSProps} from 'react-native';
 import React, {FC} from 'react';
 import {Formik} from 'formik';
 import * as Yup from 'yup';
 
 import {Screens, RootStackParamList} from '../navigation';
-import {Box, Button, Input, ScrollView, Logo} from '../legos';
+import {Box, Button, Input, ScrollView, Logo, Text} from '../legos';
+import {useAuth} from '../hooks/useAuth';
 
 type BodyType = {
-  email: string | null | undefined;
   gander: string | null | undefined;
   password: string | null | undefined;
   username: string | null | undefined;
@@ -15,7 +15,7 @@ type BodyType = {
   birthday: string | null | undefined;
 };
 
-type FieldNameType = 'email' | 'fullName' | 'username' | 'password';
+type FieldNameType = 'fullName' | 'username' | 'password';
 
 interface signUpFields {
   id: string;
@@ -29,13 +29,13 @@ interface signUpFields {
 }
 
 const signUpFields: signUpFields[] = [
-  {
-    id: 'email-standard-required',
-    fieldName: 'email',
-    placeholder: 'Email',
-    type: 'emailAddress',
-    component: 'input',
-  },
+  // {
+  //   id: 'email-standard-required',
+  //   fieldName: 'email',
+  //   placeholder: 'Email',
+  //   type: 'emailAddress',
+  //   component: 'input',
+  // },
   {
     id: 'fullName-standard-required',
     fieldName: 'fullName',
@@ -60,16 +60,12 @@ const signUpFields: signUpFields[] = [
 ];
 
 const initialValuesForm = {
-  email: 'test@test.com',
   fullName: '',
   username: '',
   password: '',
 };
 
 const validationSchema = Yup.object().shape({
-  email: Yup.string()
-    .email('Invalid email format')
-    .required('Email is required'),
   fullName: Yup.string().required('Full Name is required'),
   username: Yup.string()
     .required('Username is required')
@@ -79,14 +75,16 @@ const validationSchema = Yup.object().shape({
 
 // @ts-ignore
 export const SignUpScreen: FC<RootStackParamList> = ({navigation}) => {
+  const {signUp} = useAuth();
   //TODO: Add yup validations
 
-  const handlerSubmit = (values: any) => {
-    console.log(
-      '%c jordan values',
-      'color: lime; font-weight: bold; font-size: 12px; text-transform: uppercase',
-      values,
-    );
+  const handlerSubmit = (values: {
+    fullName: string;
+    username: string;
+    password: string;
+  }) => {
+    signUp({...values, id: '3'});
+    console.log('%c jordan values', values);
   };
 
   return (

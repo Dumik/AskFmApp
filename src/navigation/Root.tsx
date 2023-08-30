@@ -55,7 +55,7 @@ export const Root = () => {
           <RootStack.Screen
             component={Tabs}
             name={Screens.Tabs}
-            options={{headerShown: true}}
+            options={{headerShown: false}}
           />
           <RootStack.Screen
             component={StartingScreen}
