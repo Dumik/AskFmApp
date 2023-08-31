@@ -1,12 +1,14 @@
 import React from 'react';
 
-import {Box, Text} from '../../legos';
+import {Box, LikeIcon, Text} from '../../legos';
+import { Pressable } from 'react-native';
 
 type HeaderType = {
   isGoBack?: boolean
+  title?: string
 }
 
-export const Header = ({isGoBack}: HeaderType) => {
+export const Header = ({isGoBack, title}: HeaderType) => {
   return (
     <Box
       flexDirection="row"
@@ -22,9 +24,11 @@ export const Header = ({isGoBack}: HeaderType) => {
         justifyContent="space-between"
         height={40}
         width="100%">
-        <Text color="white">Profile</Text>
+        <Text color="white" fontSize={20}  fontWeight={700} lineHeight={30}>{title}</Text>
         <Box>
-          <Text fontSize={14}>❤️</Text>
+          <Pressable>
+            <LikeIcon />
+          </Pressable>
         </Box>
       </Box>
     </Box>

@@ -15,10 +15,10 @@ interface ScreenProps {
 export const ProfileScreen: FC<ScreenProps> = ({navigation}) => {
   return (
     <Box height="100%" backgroundColor="white">
-      <Header />
+      <Header title='Profile'/>
       <Box marginTop={100} height={250}>
         <ImageBackground
-          source={{uri: 'https://picsum.photos/id/228/500/900'}}
+          source={{uri: 'https://picsum.photos/id/258/500/900'}}
           style={{
             width: '100%',
             height: '100%',
@@ -39,9 +39,9 @@ export const ProfileScreen: FC<ScreenProps> = ({navigation}) => {
                 borderRadius: 100,
                 position: 'absolute',
               }}></Image>
-            <Box marginLeft={200} justifyContent="flex-end" alignItems="center">
+            <Box marginLeft={180} justifyContent="flex-end">
               <Text
-                fontSize={24}
+                fontSize={20}
                 fontWeight={700}
                 style={{paddingTop: 10}}
                 color="white">
@@ -49,8 +49,8 @@ export const ProfileScreen: FC<ScreenProps> = ({navigation}) => {
               </Text>
               <Text
                 fontSize={18}
-                fontWeight={700}
-                style={{paddingVertical: 10}}>
+                fontWeight={400}
+                style={{paddingVertical: 5}}>
                 @dumik
               </Text>
             </Box>
