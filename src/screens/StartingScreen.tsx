@@ -3,9 +3,17 @@ import React, {FC} from 'react';
 import {Screens, RootStackParamList} from '../navigation';
 import {Box, Button} from '../legos';
 import {Logo} from '../legos';
+import { StackNavigationProp } from '@react-navigation/stack';
 
-//@ts-ignore
-export const StartingScreen: FC<RootStackParamList> = ({navigation}) => {
+
+
+type ScreenNavigationProp = StackNavigationProp<RootStackParamList, Screens.Starting >;
+
+interface ScreenProps {
+  navigation: ScreenNavigationProp;
+}
+
+export const StartingScreen: FC<ScreenProps> = ({navigation}) => {
   return (
     <Box
       alignItems="center"

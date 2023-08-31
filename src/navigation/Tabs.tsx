@@ -26,11 +26,6 @@ export const Tabs = () => {
   }): BottomTabNavigationOptions => {
     return {
       tabBarIcon: ({focused}) => <Box paddingTop={19}>l</Box>,
-      // headerStyle: {
-      //   borderBottomWidth: 1,
-      //   borderBottomColor: '#274C67',
-      //   backgroundColor: '#274C67',
-      // },
       title: 'My home',
       tabBarShowLabel: false,
       headerShown: false,

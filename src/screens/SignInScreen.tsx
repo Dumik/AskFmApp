@@ -5,6 +5,7 @@ import {Screens, RootStackParamList} from '../navigation';
 import {Box, Button, Input, ScrollView, Logo, TextError} from '../legos';
 import {Formik} from 'formik';
 import * as Yup from 'yup';
+import { StackNavigationProp } from '@react-navigation/stack';
 
 
 const validationSchema = Yup.object().shape({
@@ -19,8 +20,14 @@ const initialValuesForm = {
   password: '',
 };
 
-//@ts-ignore
-export const SignInScreen: FC<RootStackParamList> = ({navigation}) => {
+
+type ScreenNavigationProp = StackNavigationProp<RootStackParamList, Screens.SignIn>;
+
+interface ScreenProps {
+  navigation: ScreenNavigationProp;
+}
+
+export const SignInScreen: FC<ScreenProps> = ({navigation}) => {
   const onSubmit = ({
     login: username,
     password,
@@ -101,9 +108,9 @@ export const SignInScreen: FC<RootStackParamList> = ({navigation}) => {
           justifyContent="center"
           paddingVertical={16}
           width={300}>
-          {/* <Text style={{marginRight: 4, color: 'white'}}>
+          <Text style={{marginRight: 4, color: 'white'}}>
             Don`t you have an account?
-          </Text> */}
+          </Text>
           <Button
             onPress={() => navigation.navigate(Screens.SignUp)}
             title="Create account"

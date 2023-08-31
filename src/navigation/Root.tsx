@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {
   NavigationContainer,
   createNavigationContainerRef,
@@ -8,43 +8,17 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {StartingScreen, SignInScreen, SignUpScreen} from '../screens';
 import {Tabs} from './Tabs';
 import {RootStackParamList, Screens} from './types';
-import {Text, View} from 'react-native';
-// import {
-//   setNavReadyWriteQuery,
-//   setPasswordChangeDataWriteQuery,
-// } from '../graphql/cacheQuery/functionsWitingCache';
-// import { useDynamicLinks } from '../hooks/useDynamicLinks';
+
 
 const RootStack = createNativeStackNavigator<RootStackParamList>();
 const Stack = createNativeStackNavigator();
 
 export const navigationRef = createNavigationContainerRef();
-function HomeScreen() {
-  return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>Home Screen</Text>
-    </View>
-  );
-}
+
 export const Root = () => {
-  // useDynamicLinks({
-  //   callbackLoadLink(val) {
-  //     // setPasswordChangeDataWriteQuery({
-  //     //   dataWrite: {
-  //     //     changePassword: val,
-  //     //   },
-  //     // });
-  //   },
-  //   callbackLoadLinkSleep(val) {
-  //     setTimeout(() => {
-  //       navigationRef.navigate(Screens.CreateNewPassword, val);
-  //     }, 500);
-  //   },
-  // });
+
   const navigationReadyCallback = () => {
-    // setNavReadyWriteQuery({
-    //   dataWrite: { isNavReady: true },
-    // });
+   
     return true;
   };
 

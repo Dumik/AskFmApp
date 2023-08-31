@@ -1,7 +1,12 @@
 import React from 'react';
+
 import {Box, Text} from '../../legos';
 
-export const Header = () => {
+type HeaderType = {
+  isGoBack?: boolean
+}
+
+export const Header = ({isGoBack}: HeaderType) => {
   return (
     <Box
       flexDirection="row"

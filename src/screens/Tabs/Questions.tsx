@@ -1,9 +1,17 @@
 import React, {FC} from 'react';
 
 import {Text, Box, Button, Logo} from '../../legos';
+import { RootStackParamList } from 'navigation';
+import { StackNavigationProp } from '@react-navigation/stack';
 
-//@ts-ignore
-export const QuestionsScreen: FC<RootStackParamList> = ({navigation}) => {
+type ScreenNavigationProp = StackNavigationProp<RootStackParamList>;
+
+interface ScreenProps {
+  navigation: ScreenNavigationProp;
+}
+
+
+export const QuestionsScreen: FC<ScreenProps> = ({navigation}) => {
   return (
     <Box
       alignItems="center"

@@ -5,6 +5,7 @@ import * as Yup from 'yup';
 
 import {Screens, RootStackParamList} from '../navigation';
 import {Box, Button, Input, ScrollView, Logo, Text} from '../legos';
+import { StackNavigationProp } from '@react-navigation/stack';
 
 type BodyType = {
   gander: string | null | undefined;
@@ -72,8 +73,14 @@ const validationSchema = Yup.object().shape({
   password: Yup.string().required('Password is required'),
 });
 
-// @ts-ignore
-export const SignUpScreen: FC<RootStackParamList> = ({navigation}) => {
+type ScreenNavigationProp = StackNavigationProp<RootStackParamList, Screens.SignUp >;
+
+interface ScreenProps {
+  navigation: ScreenNavigationProp;
+}
+
+
+export const SignUpScreen: FC<ScreenProps>  = ({navigation}) => {
   //TODO: Add yup validations
 
   const handlerSubmit = (values: {

@@ -3,9 +3,16 @@ import React, {FC} from 'react';
 import {Text, Box, Button, Logo} from '../../legos';
 import {Header} from './Header';
 import {Image, ImageBackground} from 'react-native';
+import { StackNavigationProp } from '@react-navigation/stack';
+import { RootStackParamList } from 'navigation';
 
-//@ts-ignore
-export const ProfileScreen: FC<RootStackParamList> = ({navigation}) => {
+type ScreenNavigationProp = StackNavigationProp<RootStackParamList>;
+
+interface ScreenProps {
+  navigation: ScreenNavigationProp;
+}
+
+export const ProfileScreen: FC<ScreenProps> = ({navigation}) => {
   return (
     <Box height="100%" backgroundColor="white">
       <Header />
