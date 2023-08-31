@@ -198,5 +198,5 @@ const StyledBox = styled(View)<BoxProps>`
     `}
 `;
 
-// eslint-disable-next-line react/jsx-props-no-spreading
+
 export const Box: FC<BoxProps> = props => <StyledBox {...props} />;
