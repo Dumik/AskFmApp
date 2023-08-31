@@ -1,4 +1,3 @@
-export * from './NavBar';
 export * from './icons';
 export * from './Box';
 export * from './Button';

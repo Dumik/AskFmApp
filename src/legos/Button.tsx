@@ -12,6 +12,7 @@ export interface ButtonProps extends PressableProps {
   type?: 'background' | 'text' | undefined;
   textDecorationLine?: 'underline' | 'none';
   colorTitle?: ColorType
+  
 }
 
 export const Button = ({
@@ -44,8 +45,10 @@ export const Button = ({
   return (
     <Pressable
       onPress={onPress}
-      backgroundColor={theme.colors[bgColor || 'btnLime']}
-      borderRadius={5}>
+      style={{
+        backgroundColor: theme.colors[bgColor || 'btnLime'],
+        borderRadius: 5
+      }}>
       <Box
         width={width}
         justifyContent="center"
