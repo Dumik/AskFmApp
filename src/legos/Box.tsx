@@ -113,88 +113,88 @@ const StyledBox = styled(View)<BoxProps>`
     borderBottomLeftRadius,
     borderBottomRightRadius,
   }) => `
-    ${flex && `flex: ${flex}`};
-    ${zIndex && `z-index: ${zIndex}`};
-    ${opacity && `opacity: ${opacity}`};
-    ${absolute && 'position: absolute'};
-    ${padding && `padding: ${padding}px`};
-    ${overflow && `overflow: ${overflow}`};
-    ${flexWrap && `flex-wrap: ${flexWrap}`};
-    ${top && `top: ${parseStyledSize(top)}`};
-    ${elevation && `elevation: ${elevation}`};
-    ${left && `left: ${parseStyledSize(left)}`};
-    ${alignSelf && `align-items: ${alignSelf}`};
-    ${alignItems && `align-items: ${alignItems}`};
-    ${right && `right: ${parseStyledSize(right)}`};
-    ${borderStyle && `border-style: ${borderStyle}`};
-    ${bottom && `bottom: ${parseStyledSize(bottom)}`};
-    ${margin && `margin: ${parseStyledSize(margin)}`};
+    ${flex ? `flex: ${flex}` : ''};
+    ${zIndex ? `z-index: ${zIndex}` : ''};
+    ${opacity ? `opacity: ${opacity}` : ''};
+    ${absolute ? 'position: absolute' : ''};
+    ${padding ? `padding: ${padding}px` : ''};
+    ${overflow ? `overflow: ${overflow}` : ''};
+    ${flexWrap ? `flex-wrap: ${flexWrap}` : ''};
+    ${top ? `top: ${parseStyledSize(top)}` : ''};
+    ${elevation ? `elevation: ${elevation}` : ''};
+    ${left ? `left: ${parseStyledSize(left)}` : ''};
+    ${alignSelf ? `align-items: ${alignSelf}` : ''};
+    ${alignItems ? `align-items: ${alignItems}` : ''};
+    ${right ? `right: ${parseStyledSize(right)}` : ''};
+    ${borderStyle ? `border-style: ${borderStyle}` : ''};
+    ${bottom ? `bottom: ${parseStyledSize(bottom)}` : ''};
+    ${margin ? `margin: ${parseStyledSize(margin)}` : ''};
     width: ${width ? parseStyledSize(width) : 'auto'};
     maxWidth: ${maxWidth ? parseStyledSize(maxWidth) : 'auto'};
-    ${borderWidth && `border-width: ${borderWidth}`}px;
-    ${shadowOffset && `shadow-offset: ${shadowOffset}`};
-    ${padding && `padding: ${parseStyledSize(padding)}`};
+    ${borderWidth ? `border-width: ${borderWidth}px` : ''};
+    ${shadowOffset ? `shadow-offset: ${shadowOffset}` : ''};
+    ${padding ? `padding: ${parseStyledSize(padding)}` : ''};
     height: ${height ? parseStyledSize(height) : 'auto'};
-    ${shadowRadius && `shadow-radius: ${shadowRadius}px`};
-    ${borderRadius && `border-radius: ${borderRadius}`}px;
-    ${shadowOpacity && `shadow-opacity: ${shadowOpacity}`};
-    ${flexDirection && `flex-direction: ${flexDirection}`};
-    ${minWidth && `min-width: ${parseStyledSize(minWidth)}`};
-    ${justifyContent && `justify-content: ${justifyContent}`};
-    ${marginTop && `margin-top: ${parseStyledSize(marginTop)}`};
-    ${borderTopWidth && `border-top-width: ${borderTopWidth}`}px;
-    ${marginLeft && `margin-left: ${parseStyledSize(marginLeft)}`};
+    ${shadowRadius ? `shadow-radius: ${shadowRadius}px` : ''};
+    ${borderRadius ? `border-radius: ${borderRadius}px` : ''};
+    ${shadowOpacity ? `shadow-opacity: ${shadowOpacity}` : ''};
+    ${flexDirection ? `flex-direction: ${flexDirection}` : ''};
+    ${minWidth ? `min-width: ${parseStyledSize(minWidth)}` : ''};
+    ${justifyContent ? `justify-content: ${justifyContent}` : ''};
+    ${marginTop ? `margin-top: ${parseStyledSize(marginTop)}` : ''};
+    ${borderTopWidth ? `border-top-width: ${borderTopWidth}px` : ''};
+    ${marginLeft ? `margin-left: ${parseStyledSize(marginLeft)}` : ''};
     ${
-      (paddingTop || paddingVertical) &&
-      `padding-top: ${parseStyledSize(paddingTop || paddingVertical || 0)}`
+      (paddingTop || paddingVertical) ?
+      `padding-top: ${parseStyledSize(paddingTop || paddingVertical || 0)}` : ''
     };
-    ${borderLeftWidth && `border-left-width: ${borderLeftWidth}`}px;
+    ${borderLeftWidth ? `border-left-width: ${borderLeftWidth}px` : ''};
     ${
-      (paddingLeft || paddingHorizontal) &&
-      `padding-left: ${parseStyledSize(paddingLeft || paddingHorizontal || 0)}`
+      (paddingLeft || paddingHorizontal) ?
+      `padding-left: ${parseStyledSize(paddingLeft || paddingHorizontal || 0)}` : ''
     };
-    ${marginRight && `margin-right: ${parseStyledSize(marginRight)}`};
-    ${borderRightWidth && `border-right-width: ${borderRightWidth}`}px;
+    ${marginRight ? `margin-right: ${parseStyledSize(marginRight)}` : ''};
+    ${borderRightWidth ? `border-right-width: ${borderRightWidth}px` : ''};
     ${
-      (paddingRight || paddingHorizontal) &&
+      (paddingRight || paddingHorizontal) ?
       `padding-right: ${parseStyledSize(
         paddingRight || paddingHorizontal || 0,
-      )}`
+      )}` : ''
     };
-    ${marginBottom && `margin-bottom: ${parseStyledSize(marginBottom)}`};
-    ${borderRadius && `border-radius: ${parseStyledSize(borderRadius)}`};
-    ${minHeight && `min-height: ${parseStyledSize(minHeight)}`};
-    ${borderBottomWidth && `border-bottom-width: ${borderBottomWidth}`}px;
+    ${marginBottom ? `margin-bottom: ${parseStyledSize(marginBottom)}` : ''};
+    ${borderRadius ? `border-radius: ${parseStyledSize(borderRadius)}` : ''};
+    ${minHeight ? `min-height: ${parseStyledSize(minHeight)}` : ''};
+    ${borderBottomWidth ? `border-bottom-width: ${borderBottomWidth}px` : ''};
     ${
-      (paddingBottom || paddingVertical) &&
+      (paddingBottom || paddingVertical) ?
       `padding-bottom: ${parseStyledSize(
         paddingBottom || paddingVertical || 0,
-      )}`
+      )}` : ''
     };
     ${
-      borderBottomLeftRadius &&
-      `border-bottom-left-radius: ${borderBottomLeftRadius}`
-    }px;
-    ${
-      borderBottomRightRadius &&
-      `border-bottom-right-radius: ${borderBottomRightRadius}`
-    }px;
-    ${
-      backgroundColor &&
-      `background-color: ${theme.colors[backgroundColor] || backgroundColor}`
+      borderBottomLeftRadius ?
+      `border-bottom-left-radius: ${borderBottomLeftRadius}px` : ''
     };
     ${
-      borderTopLeftRadius && `border-top-left-radius: ${borderTopLeftRadius}`
-    }px;
-    ${
-      shadowColor && `shadow-color: ${theme.colors[shadowColor] || shadowColor}`
+      borderBottomRightRadius ?
+      `border-bottom-right-radius: ${borderBottomRightRadius}px` : ''
     };
     ${
-      borderColor && `border-color: ${theme.colors[borderColor] || borderColor}`
+      backgroundColor ?
+      `background-color: ${theme.colors[backgroundColor] || backgroundColor}` : ''
     };
     ${
-      borderTopRightRadius && `border-top-right-radius: ${borderTopRightRadius}`
-    }px;
+      borderTopLeftRadius ? `border-top-left-radius: ${borderTopLeftRadius}px` : ''
+    };
+    ${
+      shadowColor ? `shadow-color: ${theme.colors[shadowColor] || shadowColor}` : ''
+    };
+    ${
+      borderColor ? `border-color: ${theme.colors[borderColor] || borderColor}` : ''
+    };
+    ${
+      borderTopRightRadius ? `border-top-right-radius: ${borderTopRightRadius}px` : ''
+    };
     `}
 `;
 
