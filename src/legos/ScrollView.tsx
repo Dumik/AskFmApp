@@ -20,7 +20,7 @@ interface Props extends ScrollViewProps {
 
 const StyledScrollView = styled(ScrollViewComp)<Props>`
   ${({ flex, backgroundColor }) => `
-    ${flex && `flex: ${flex}`};
+    ${flex ? `flex: ${flex}` : ''};
     
     ${`background-color: ${
       backgroundColor ? theme.colors[backgroundColor] : 'white'

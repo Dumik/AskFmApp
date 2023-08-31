@@ -3,8 +3,6 @@ import { Text as TextRN, TextProps } from 'react-native';
 import styled from 'styled-components';
 import { ColorType, theme } from '../utils';
 
-// import { ColorType, theme } from './utils';
-
 type FontWeight = 300 | 400 | 700;
 
 interface StyledTextProps extends TextProps {
