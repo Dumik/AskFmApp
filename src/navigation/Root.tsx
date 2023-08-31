@@ -11,7 +11,6 @@ import {RootStackParamList, Screens} from './types';
 
 
 const RootStack = createNativeStackNavigator<RootStackParamList>();
-const Stack = createNativeStackNavigator();
 
 export const navigationRef = createNavigationContainerRef();
 

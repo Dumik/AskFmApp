@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-import {Text, Box, Button, Logo} from '../../legos';
+import {Text, Box, Button } from '../../legos';
 import {Header} from './Header';
 import {Image, ImageBackground} from 'react-native';
 import { StackNavigationProp } from '@react-navigation/stack';

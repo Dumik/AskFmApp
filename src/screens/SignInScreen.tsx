@@ -1,5 +1,5 @@
-import {Text, TextInput} from 'react-native';
-import React, {FC, useCallback, useContext, useState} from 'react';
+import {Text } from 'react-native';
+import React, {FC} from 'react';
 
 import {Screens, RootStackParamList} from '../navigation';
 import {Box, Button, Input, ScrollView, Logo, TextError} from '../legos';

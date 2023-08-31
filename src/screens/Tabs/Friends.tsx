@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-import {Text, Box, Button, Logo} from '../../legos';
+import {Text, Box, Logo} from '../../legos';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from 'navigation';
 

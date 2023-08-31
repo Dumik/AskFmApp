@@ -7,13 +7,6 @@ import {Screens, RootStackParamList} from '../navigation';
 import {Box, Button, Input, ScrollView, Logo, Text} from '../legos';
 import { StackNavigationProp } from '@react-navigation/stack';
 
-type BodyType = {
-  gander: string | null | undefined;
-  password: string | null | undefined;
-  username: string | null | undefined;
-  fullName: string | null | undefined;
-  birthday: string | null | undefined;
-};
 
 type FieldNameType = 'fullName' | 'username' | 'password';
 
@@ -29,13 +22,6 @@ interface signUpFields {
 }
 
 const signUpFields: signUpFields[] = [
-  // {
-  //   id: 'email-standard-required',
-  //   fieldName: 'email',
-  //   placeholder: 'Email',
-  //   type: 'emailAddress',
-  //   component: 'input',
-  // },
   {
     id: 'fullName-standard-required',
     fieldName: 'fullName',
