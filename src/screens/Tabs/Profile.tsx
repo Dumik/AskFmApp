@@ -1,10 +1,10 @@
 import React, {FC} from 'react';
 
-import {Text, Box, Button } from '../../legos';
+import {Text, Box, Button} from '../../legos';
 import {Header} from './Header';
 import {Image, ImageBackground} from 'react-native';
-import { StackNavigationProp } from '@react-navigation/stack';
-import { RootStackParamList } from 'navigation';
+import {StackNavigationProp} from '@react-navigation/stack';
+import {RootStackParamList} from 'navigation';
 
 type ScreenNavigationProp = StackNavigationProp<RootStackParamList>;
 
@@ -15,7 +15,7 @@ interface ScreenProps {
 export const ProfileScreen: FC<ScreenProps> = ({navigation}) => {
   return (
     <Box height="100%" backgroundColor="white">
-      <Header title='Profile'/>
+      <Header title="Profile" />
       <Box marginTop={100} height={250}>
         <ImageBackground
           source={{uri: 'https://picsum.photos/id/258/500/900'}}
@@ -47,10 +47,7 @@ export const ProfileScreen: FC<ScreenProps> = ({navigation}) => {
                 color="white">
                 Oleg
               </Text>
-              <Text
-                fontSize={18}
-                fontWeight={400}
-                style={{paddingVertical: 5}}>
+              <Text fontSize={18} fontWeight={400} style={{paddingVertical: 5}}>
                 @dumik
               </Text>
             </Box>

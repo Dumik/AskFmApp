@@ -1,12 +1,12 @@
 import React from 'react';
 
 import {Box, LikeIcon, Text} from '../../legos';
-import { Pressable } from 'react-native';
+import {Pressable} from 'react-native';
 
 type HeaderType = {
-  isGoBack?: boolean
-  title?: string
-}
+  isGoBack?: boolean;
+  title?: string;
+};
 
 export const Header = ({isGoBack, title}: HeaderType) => {
   return (
@@ -24,7 +24,9 @@ export const Header = ({isGoBack, title}: HeaderType) => {
         justifyContent="space-between"
         height={40}
         width="100%">
-        <Text color="white" fontSize={20}  fontWeight={700} lineHeight={30}>{title}</Text>
+        <Text color="white" fontSize={20} fontWeight={700} lineHeight={30}>
+          {title}
+        </Text>
         <Box>
           <Pressable>
             <LikeIcon />

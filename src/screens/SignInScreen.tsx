@@ -1,12 +1,11 @@
-import {Text } from 'react-native';
+import {Text} from 'react-native';
 import React, {FC} from 'react';
 
 import {Screens, RootStackParamList} from '../navigation';
 import {Box, Button, Input, ScrollView, Logo, TextError} from '../legos';
 import {Formik} from 'formik';
 import * as Yup from 'yup';
-import { StackNavigationProp } from '@react-navigation/stack';
-
+import {StackNavigationProp} from '@react-navigation/stack';
 
 const validationSchema = Yup.object().shape({
   login: Yup.string()
@@ -20,8 +19,10 @@ const initialValuesForm = {
   password: 'q',
 };
 
-
-type ScreenNavigationProp = StackNavigationProp<RootStackParamList, Screens.SignIn>;
+type ScreenNavigationProp = StackNavigationProp<
+  RootStackParamList,
+  Screens.SignIn
+>;
 
 interface ScreenProps {
   navigation: ScreenNavigationProp;
